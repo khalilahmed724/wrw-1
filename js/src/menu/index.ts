@@ -13,7 +13,7 @@ export const menu: JupyterFrontEndPlugin<void> = {
 
     // Create a new menu
     const menu: Menu = new Menu({ commands });
-    menu.title.label = 'ROS';
+    menu.title.label = 'ROSDYNAMICS';
     mainMenu.addMenu(menu, { rank: 80 });
     
     // Open Zethus
