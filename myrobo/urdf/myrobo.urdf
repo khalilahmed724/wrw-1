@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="myrobo">
+    <link name="world" />
+    <joint name="fixed" type="fixed">
+        <parent link="world" />
+        <child link="base_link" />
+    </joint>
+    <link name="base_link">
+        
+<inertial>
+            <origin xyz="4.09806696064146E-17 -1.14126716903712E-17 0.00459171458510011" rpy="0 0 0" />
+            <mass value="0.0288174973188085" />
+            <inertia ixx="9.25051055821481E-06" ixy="-7.02578454851562E-22" ixz="-4.92111158734313E-22" iyy="9.25051055821481E-06" iyz="-2.71702725352216E-20" izz="1.78233134695278E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="elbow01">
+        
+<inertial>
+            <origin xyz="0.0112604935607844 -3.38706414801057E-06 -0.023201191440335" rpy="0 0 0" />
+            <mass value="0.0435645520761735" />
+            <inertia ixx="1.7237011341498E-05" ixy="3.6594552570079E-09" ixz="4.39323096892344E-06" iyy="2.1173015413831E-05" iyz="-2.83845167844656E-09" izz="2.53835553793144E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow01.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow01.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint01" type="revolute">
+        <origin xyz="0 0 0.01" rpy="-3.1416 0 0.029337" />
+        <parent link="base_link" />
+        <child link="elbow01" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="6.28" effort="30" velocity="0" />
+    </joint>
+    <link name="elbow0203">
+        
+<inertial>
+            <origin xyz="0.0598499078313531 0.000211526808845008 -0.0220742365734663" rpy="0 0 0" />
+            <mass value="0.105167234281897" />
+            <inertia ixx="3.79175385966445E-05" ixy="1.78764422036769E-10" ixz="1.18710506603321E-10" iyy="0.000139816799084217" iyz="-1.43021672925934E-07" izz="0.000152806545256275" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow0203.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow0203.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint02" type="revolute">
+        <origin xyz="0.040897 0 -0.0279" rpy="-1.5708 -0.026337 1.5708" />
+        <parent link="elbow01" />
+        <child link="elbow0203" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.1482" effort="30" velocity="0" />
+    </joint>
+    <link name="elbow03">
+        
+<inertial>
+            <origin xyz="-0.0306258181634097 0.000233311116238324 0.00700826596930849" rpy="0 0 0" />
+            <mass value="0.0464510724739686" />
+            <inertia ixx="1.64131392155704E-05" ixy="6.59473464124044E-08" ixz="3.89341371645115E-06" iyy="2.08572480471599E-05" iyz="-7.61359417171547E-08" izz="2.59321179337506E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow03.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow03.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint03" type="revolute">
+        <origin xyz="0.1197 0 0.001103" rpy="2.3862 1.5708 -1.2037" />
+        <parent link="elbow0203" />
+        <child link="elbow03" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="5.20" effort="30" velocity="0" />
+    </joint>
+    <link name="elbow04">
+        
+<inertial>
+            <origin xyz="0.00169391018381115 -1.03107132554126E-07 0.0238967477874054" rpy="0 0 0" />
+            <mass value="0.0373304259460874" />
+            <inertia ixx="1.05650258231412E-05" ixy="-1.4554285857161E-11" ixz="-1.17140652095665E-06" iyy="1.0173614189262E-05" iyz="-7.18240089633811E-11" izz="9.6938718422234E-06" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow04.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow04.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint04" type="revolute">
+        <origin xyz="-0.039794 0 0.042119" rpy="0 0 -0.063661" />
+        <parent link="elbow03" />
+        <child link="elbow04" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="6.284" effort="30" velocity="0" />
+    </joint>
+    <link name="elbow05">
+        
+<inertial>
+            <origin xyz="0.0244387818385255 0.0277183345439888 -0.0023921288264421" rpy="0 0 0" />
+            <mass value="0.0188746301093839" />
+            <inertia ixx="4.80611705014575E-06" ixy="-4.28565045264268E-07" ixz="7.89458196884499E-07" iyy="4.69785761468781E-06" iyz="8.9538925131098E-07" izz="5.65513904545539E-06" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow05.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/elbow05.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint05" type="revolute">
+        <origin xyz="0.010255 0 0.054031" rpy="-0.33099 -0.35315 -0.78862" />
+        <parent link="elbow04" />
+        <child link="elbow05" />
+        <axis xyz="0.66133 0.75009 0" />
+        <limit lower="0" upper="6.284" effort="30" velocity="0" />
+    </joint>
+    <link name="end">
+        
+<inertial>
+            <origin xyz="5.81075743077974E-11 1.39183484182404E-10 0.00896736042107631" rpy="0 0 0" />
+            <mass value="0.00400804744482665" />
+            <inertia ixx="2.15209025250744E-07" ixy="-1.10133724144106E-15" ixz="-2.86411484279201E-15" iyy="2.15209027261701E-07" iyz="-6.84586864792589E-15" izz="3.30349565556063E-07" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/end.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://myrobo/meshes/end.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint06" type="revolute">
+        <origin xyz="0.029775 0.033771 -0.021427" rpy="3.1416 0 0.90658" />
+        <parent link="elbow05" />
+        <child link="end" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="6.284" effort="30" velocity="0" />
+    </joint>
+    
+<transmission name="trans_joint01">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint01">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint01_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint02">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint02">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint02_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint03">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint03">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint03_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint04">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint04">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint04_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint05">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint05">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint05_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint06">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint06">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint06_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
