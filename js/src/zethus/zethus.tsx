@@ -22,7 +22,7 @@ export default class ZethusWidget extends IFrame {
     const baseUrl = PageConfig.getBaseUrl();
     this.url = baseUrl + 'ros/zethus/index.html';
     this.id = 'Zethus';
-    this.title.label = 'Zethus';
+    this.title.label = 'ROSDYNAMICS';
     this.title.closable = true;
     this.node.style.overflowY = 'auto';
     this.node.style.background = '#FFF';
