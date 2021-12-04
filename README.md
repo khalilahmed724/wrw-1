@@ -2,8 +2,6 @@
 
 A JupyterLab extension for ROS.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/RoboStack/jupyterlab-ros/master?urlpath=lab/tree/examples)
-
 ### Install
 
 We recommend following the installation instructions of the [RoboStack](https://github.com/RoboStack/ros-noetic) repository which enables you to install ROS Noetic in a conda environment. After following these instructions, simply
@@ -63,5 +61,5 @@ pip uninstall jupyter_ros_server
 jupyter lab clean
 jupyter lab build
 ```
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/khalilahmed427/wrw.git/HEAD)
+
 
