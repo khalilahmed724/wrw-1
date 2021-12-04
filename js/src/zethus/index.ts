@@ -22,8 +22,8 @@ export const zethus: JupyterFrontEndPlugin<void> = {
 
     let command = 'jupyterlab-ros/zethus:open';
     commands.addCommand(command, {
-      label: 'Open Zethus',
-      caption: 'Open a new Zethus view.',
+      label: 'Open ROSDYNA ROBOT',
+      caption: 'Open a new rosdyna robot view.',
       isVisible: () => true,
       isEnabled: () => true,
       isToggled: () => widget !== null,
