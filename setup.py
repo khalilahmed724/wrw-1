@@ -8,8 +8,8 @@ from jupyter_packaging import (
 
 from setuptools import setup, find_packages
 
-name = 'jupyter_ros_server'
-ext_name = '@robostack/jupyterlab-ros'
+name = 'khalil'
+ext_name = 'khalil'
 
 # Ensure a valid python version
 ensure_python('>=3.6')
@@ -61,7 +61,7 @@ setup_args = {
     'description': "Jupyterlab server extension for ROS.",
     'author': "QuantStack",
     'license': "BSD-3-Clause",
-    'url': "https://github.com/RoboStack/jupyterlab-ros",
+    'url': "https://github.com/khalilahmed427/wrw",
     'include_package_data': True,
     'packages': find_packages(),
     'cmdclass': cmdclass,
