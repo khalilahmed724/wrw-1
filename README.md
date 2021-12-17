@@ -1,7 +1,5 @@
 
 
-
-
 # jupyterlab-ros
 
 A JupyterLab extension for ROS.
