@@ -23,7 +23,6 @@ dependencies:
 - ros-noetic-teb-local-planner
 - ros-noetic-turtlebot3
 - ros-noetic-turtlebot3-fake
-- ros-noetic-myrobo
 # our stuff
 - robostack::jupyterlab-ros
 - robostack::jupyter-amphion
