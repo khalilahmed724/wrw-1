@@ -2,7 +2,6 @@ name: jupyterlab-ros
 channels:
 - conda-forge
 - robostack
-- khalilahmed724
 dependencies:
 - python=3.8
 - nodejs=14
@@ -14,13 +13,17 @@ dependencies:
 - voila
 - ros-noetic-ros-core
 - ros-noetic-rospy
+- ros-noetic-myrobo
+- ros-noetic-robm
 - ros-noetic-rosbridge-suite
 - ros-noetic-rosbag
 - ros-noetic-rosauth
 - ros-noetic-tf2-web-republisher
-- ros-noetic-myrobo
-- ros-noetic-robm
-
+- ros-noetic-franka-ros
+- ros-noetic-interactive-marker-tutorials
+- ros-noetic-teb-local-planner
+- ros-noetic-turtlebot3
+- ros-noetic-turtlebot3-fake
 # our stuff
 - robostack::jupyterlab-ros
 - robostack::jupyter-amphion
