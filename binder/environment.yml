@@ -1,5 +1,5 @@
 name: jupyterlab-ros
 channels:
-- khalilahmed724
+- khalilahmed724/label/khalilahmed724
 dependencies:
 - ros-noetic-myrobo
