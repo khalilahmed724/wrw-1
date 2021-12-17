@@ -14,8 +14,6 @@ dependencies:
 - voila
 - ros-noetic-ros-core
 - ros-noetic-rospy
-- ros-noetic-myrobo
-- ros-noetic-robm
 - ros-noetic-rosbridge-suite
 - ros-noetic-rosbag
 - ros-noetic-rosauth
@@ -25,6 +23,7 @@ dependencies:
 - ros-noetic-teb-local-planner
 - ros-noetic-turtlebot3
 - ros-noetic-turtlebot3-fake
+- ros-noetic-myrobo
 # our stuff
 - robostack::jupyterlab-ros
 - robostack::jupyter-amphion
