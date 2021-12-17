@@ -12,17 +12,10 @@ dependencies:
 - bqplot
 - ipywidgets
 - voila
-- ros-noetic-ros-core
-- ros-noetic-rospy
-- ros-noetic-rosbridge-suite
-- ros-noetic-rosbag
-- ros-noetic-rosauth
-- ros-noetic-tf2-web-republisher
-- ros-noetic-franka-ros
-- ros-noetic-interactive-marker-tutorials
-- ros-noetic-teb-local-planner
-- ros-noetic-turtlebot3
-- ros-noetic-turtlebot3-fake
+- ros-noetic-franka-control
+
+
+
 # our stuff
 - robostack::jupyterlab-ros
 - robostack::jupyter-amphion
