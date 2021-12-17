@@ -2,6 +2,7 @@ name: jupyterlab-ros
 channels:
 - conda-forge
 - robostack
+- khalilahmed724
 dependencies:
 - python=3.8
 - nodejs=14
