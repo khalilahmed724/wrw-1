@@ -29,3 +29,4 @@ dependencies:
 - robostack::jupyterlab-ros
 - robostack::jupyter-amphion
 # - robostack::jupyter-ros=0.5
+cacascasca
